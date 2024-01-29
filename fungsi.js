@@ -6,7 +6,7 @@ var toFloat = parseFloat(y);
 var toString = toNum.toString();
 console.log(toString + toString);
 
-//fungsi ekspresi
+//fungsi deklarasi
 function jumlah(a, b){
     return a + b;
 }
