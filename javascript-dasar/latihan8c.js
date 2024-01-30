@@ -1,32 +1,31 @@
-var user = prompt('Select One \n1.Gajah \n2.Orang \n3.Semut')
-var computer = Math.random();
+var pilihanUser = prompt("Apakah kamu gajah, orang, atau semut?");
+var pilihanComputer = Math.random();
 
-if (computer < 0.34) {
-    computer = "Gajah";
-} else if (computer <= 0.67) {
-    computer = "Orang";
+if (pilihanComputer < 0.34) {
+    pilihanComputer = "gajah";
+} else if (pilihanComputer <= 0.67) {
+    pilihanComputer = "orang";
 } else {
-    computer = "Semut";
+    pilihanComputer = "semut";
 }
 
-if (user == 1 && computer == "Gajah") { // User 1
-    alert('Kamu Menang Komputer Memilih ' + computer)
-} else if (user == 1 && computer == "Semut") {
-    alert('Seri Komputer Memilih ' + computer)
-} else if (user == 1 && computer == "Orang") {
-    alert('Kamu Kalah Komputer Memilih ' + computer)
-} else if (user == 2 && computer == "Gajah") { // User 2
-    alert('Kamu Kalah Komputer Memilih ' + computer)
-} else if (user == 2 && computer == "Semut") {
-    alert('Kamu Menang Komputer Memilih ' + computer)
-} else if (user == 2 && computer == "Orang") {
-    alert('Seri Komputer Komputer Memilih ' + computer)
-} else if (user == 3 && computer == "Gajah") { // User 3
-    alert('Seri Komputer Komputer Memilih ' + computer)
-} else if (user == 3 && computer == "Semut") {
-    alert('Kamu Kalah Komputer Memilih ' + computer)
-} else if (user == 3 && computer == "Orang") {
-    alert('Kamu Menang Komputer Memilih ' + computer)
+function bandingkanPilihan(user, computer) {
+    if (user === computer) {
+        return "Hasilnya seri";
+    } else if (
+        (user === "gajah" && computer === "orang") ||
+        (user === "orang" && computer === "semut") ||
+        (user === "semut" && computer === "gajah")
+    ) {
+        return "Kamu menang!";
+    } else {
+        return "Komputer menang!";
+    }
+}
+
+if (pilihanUser === "gajah" || pilihanUser === "orang" || pilihanUser === "semut") {
+    var hasil = bandingkanPilihan(pilihanUser, pilihanComputer);
+    alert("Kamu memilih: " + pilihanUser + "\nKomputer memilih: " + pilihanComputer + "\n\n" + hasil);
 } else {
-    alert('Masukan Input yang Benar')
+    alert("pilihan mu salah");
 }
