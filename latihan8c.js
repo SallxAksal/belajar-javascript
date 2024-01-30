@@ -18,14 +18,14 @@ if (user == 1 && computer == "Gajah") { // User 1
 } else if (user == 2 && computer == "Gajah") { // User 2
     alert('Kamu Kalah Komputer Memilih ' + computer)
 } else if (user == 2 && computer == "Semut") {
-    alert('Kamu Menang Memilih ' + computer)
+    alert('Kamu Menang Komputer Memilih ' + computer)
 } else if (user == 2 && computer == "Orang") {
-    alert('Seri Komputer Memilih ' + computer)
+    alert('Seri Komputer Komputer Memilih ' + computer)
 } else if (user == 3 && computer == "Gajah") { // User 3
-    alert('Seri Komputer Memilih ' + computer)
-} else if (user == 2 && computer == "Semut") {
+    alert('Seri Komputer Komputer Memilih ' + computer)
+} else if (user == 3 && computer == "Semut") {
     alert('Kamu Kalah Komputer Memilih ' + computer)
-} else if (user == 2 && computer == "Orang") {
+} else if (user == 3 && computer == "Orang") {
     alert('Kamu Menang Komputer Memilih ' + computer)
 } else {
     alert('Masukan Input yang Benar')
